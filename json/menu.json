@@ -1,0 +1,623 @@
+[
+	{
+		"nombre": "Desayunos",
+		"platillos": [
+			{
+				"ID": "0",
+				"nombre": "Huevos al gusto",
+				"precio": "60",
+				"descripcion": "Huevos preparados al gusto",
+				"img": "../public/img/desayunos/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Frijoles"
+					},
+					{
+						"ID": "1",
+						"nombre": "Chilaquiles"
+					},
+					{
+						"ID": "2",
+						"nombre": "Papas fritas"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "6000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "6 g"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Guisado",
+				"precio": "65",
+				"descripcion": "Un gisado a escojer con café",
+				"img": "../public/img/desayunos/2.jpg",
+				"ingredientes": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"ID": "0",
+						"nombre": "Frijoles"
+					},
+					{
+						"ID": "1",
+						"nombre": "Chilaquiles"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "70g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "5000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "80 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "2 g"
+					}
+				]
+			},
+			{
+				"ID": "2",
+				"nombre": "Pan",
+				"precio": "35",
+				"descripcion": "Pan con café",
+				"img": "../public/img/desayunos/3.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Tostado con mantequilla"
+					},
+					{
+						"ID": "1",
+						"nombre": "Tostado con mermelada"
+					},
+					{
+						"ID": "2",
+						"nombre": "Dulce"
+					},
+					{
+						"ID": "3",
+						"nombre": "Con mantequilla y avena"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "120 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "8500 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "75 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "5 g"
+					}
+				]
+			},
+			{
+				"ID": "3",
+				"nombre": "Hot cakes",
+				"precio": "60",
+				"descripcion": "Hot cakes",
+				"img": "../public/img/desayunos/4.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Fruta"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "70g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "5000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "80 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "2 g"
+					}
+				]
+			},
+			{
+				"ID": "4",
+				"nombre": "Fruta",
+				"precio": "65",
+				"descripcion": "Fruta de temporada",
+				"img": "../public/img/desayunos/5.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Yogurth"
+					},
+					{
+						"ID": "1",
+						"nombre": "Jugo de naranja"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "70g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "5000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "80 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "2 g"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nombre": "Comidas",
+		"platillos": 
+		[
+			{
+				"ID": "0",
+				"nombre": "Burritos",
+				"precio": "14",
+				"descripcion": "Burritos echos con el guiso del día",
+				"img": "../public/img/comidas/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Papa francea"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "200 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "120 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "9000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "3 g"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Tortas",
+				"precio": "50",
+				"descripcion": "Tortas",
+				"img": "../public/img/comidas/2.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Lomo"
+					},
+					{
+						"ID": "1",
+						"nombre": "Deshebrada"
+					},
+					{
+						"ID": "2",
+						"nombre": "Milanesa"
+					},
+					{
+						"ID": "3",
+						"nombre": "Jamon"
+					},
+					{
+						"ID": "4",
+						"nombre": "Del chavo"	
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "3000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "3 g"
+					}
+				]
+			},
+			{
+				"ID": "2",
+				"nombre": "Hamburguesas",
+				"precio": "150",
+				"descripcion": "Hamburguesa",
+				"img": "../public/img/comidas/3.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "jamon"
+					},
+					{
+						"ID": "1",
+						"nombre": "Queso"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "10000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "10 g"
+					}
+				]
+			},
+			{
+				"ID": "3",
+				"nombre": "Hot dog",
+				"precio": "25",
+				"descripcion": "Diversos antojos",
+				"img": "../public/img/comidas/4.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Hot Dog"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "10000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "10 g"
+					}
+				]
+			},
+			{
+				"ID": "4",
+				"nombre": "Pizza",
+				"precio": "17",
+				"descripcion": "Diversos antojos",
+				"img": "../public/img/comidas/5.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Pizza"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "10000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "10 g"
+					}
+				]
+			},
+			{
+				"ID": "5",
+				"nombre": "Enchiladas",
+				"precio": "50",
+				"descripcion": "Enchiladas rojas",
+				"img": "../public/img/comidas/6.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Con arroz"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "AVISO",
+						"cantidades": "El contenido calorico puede variar"
+					},
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energ�tico",
+						"cantidades": "10000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "10 g"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nombre": "Bebidas",
+		"platillos": 
+		[
+			{
+				"ID": "0",
+				"nombre": "Refrescos",
+				"precio": "20",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/1.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Coca Cola",
+						"img": "/public/img/bebidas/refrescos/1.jpg"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pepsi",
+						"img": "/public/img/bebidas/refrescos/2.jpg"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Aguas Frescas",
+				"precio": "15",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/2.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Limonada",
+						"img": "/public/img/bebidas/aguas/1.jpg"
+
+					},
+					{
+						"ID": "1",
+						"nombre": "Horchata",
+						"img": "/public/img/bebidas/aguas/2.jpg"
+					}
+				]
+			}
+		]
+	}
+]
