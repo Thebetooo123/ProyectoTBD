@@ -21,40 +21,6 @@
 						"ID": "2",
 						"nombre": "Papas fritas"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "130 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "50 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "90 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "6000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "50 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "6 g"
-					}
 				]
 			},
 			{
@@ -75,40 +41,6 @@
 					{
 						"ID": "1",
 						"nombre": "Chilaquiles"
-					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "70g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "5000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "80 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "60 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "2 g"
 					}
 				]
 			},
@@ -135,36 +67,6 @@
 						"ID": "3",
 						"nombre": "Con mantequilla y avena"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "grasas totales",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "120 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "8500 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "75 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "5 g"
-					}
 				]
 			},
 			{
@@ -177,40 +79,6 @@
 					{
 						"ID": "0",
 						"nombre": "Fruta"
-					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "70g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "5000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "80 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "60 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "2 g"
 					}
 				]
 			},
@@ -229,40 +97,6 @@
 						"ID": "1",
 						"nombre": "Jugo de naranja"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "70g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "5000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "80 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "60 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "2 g"
-					}
 				]
 			}
 		]
@@ -274,47 +108,13 @@
 			{
 				"ID": "0",
 				"nombre": "Burritos",
-				"precio": "14",
-				"descripcion": "Burritos echos con el guiso del día",
+				"precio": "20",
+				"descripcion": "Burritos con el guiso del dia",
 				"img": "../public/img/comidas/1.jpg",
 				"ingredientes": [
 					{
 						"ID": "0",
-						"nombre": "Papa francea"
-					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "200 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "120 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "9000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "50 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "3 g"
+						"nombre": "Doble guiso"
 					}
 				]
 			},
@@ -345,40 +145,6 @@
 						"ID": "4",
 						"nombre": "Del chavo"	
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "100 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "60 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "3000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "50 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "50 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "3 g"
-					}
 				]
 			},
 			{
@@ -396,40 +162,6 @@
 						"ID": "1",
 						"nombre": "Queso"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "130 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "90 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "10000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "10 g"
-					}
 				]
 			},
 			{
@@ -442,40 +174,6 @@
 					{
 						"ID": "0",
 						"nombre": "Hot Dog"
-					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "130 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "90 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "10000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "10 g"
 					}
 				]
 			},
@@ -490,40 +188,6 @@
 						"ID": "0",
 						"nombre": "Pizza"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "130 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "90 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "10000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "10 g"
-					}
 				]
 			},
 			{
@@ -537,40 +201,6 @@
 						"ID": "0",
 						"nombre": "Con arroz"
 					}
-				],
-				"calorias": [
-					{
-						"nombre": "AVISO",
-						"cantidades": "El contenido calorico puede variar"
-					},
-					{
-						"nombre": "grasas totales",
-						"cantidades": "150 g"
-					},
-					{
-						"nombre": "grasas saturadas",
-						"cantidades": "130 g"
-					},
-					{
-						"nombre": "calorias",
-						"cantidades": "90 g"
-					},
-					{
-						"nombre": "valor energ�tico",
-						"cantidades": "10000 kJ"
-					},
-					{
-						"nombre": "azucares",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "proteinas",
-						"cantidades": "30 g"
-					},
-					{
-						"nombre": "sal",
-						"cantidades": "10 g"
-					}
 				]
 			}
 		]
@@ -582,7 +212,7 @@
 			{
 				"ID": "0",
 				"nombre": "Refrescos",
-				"precio": "20",
+				"precio": "14",
 				"descripcion": "lorem ipsum",
 				"img": "../public/img/bebidas/1.jpg",
 				"types": [
@@ -593,28 +223,254 @@
 					},
 					{
 						"ID": "1",
-						"nombre": "Pepsi",
+						"nombre": "Root Beer",
 						"img": "/public/img/bebidas/refrescos/2.jpg"
+					},
+					{
+						"ID": "2",
+						"nombre": "Soto",
+						"img": "/public/img/bebidas/refrescos/3.jpg"
+					},
+					{
+						"ID": "3",
+						"nombre": "Otros",
+						"img": "/public/img/bebidas/1.jpg"
 					}
 				]
 			},
 			{
 				"ID": "1",
-				"nombre": "Aguas Frescas",
+				"nombre": "Jugos",
 				"precio": "15",
 				"descripcion": "lorem ipsum",
 				"img": "../public/img/bebidas/2.jpg",
 				"types": [
 					{
 						"ID": "0",
-						"nombre": "Limonada",
-						"img": "/public/img/bebidas/aguas/1.jpg"
+						"nombre": "Del valle",
+						"img": "/public/img/bebidas/jugos/1.jpg"
 
 					},
 					{
 						"ID": "1",
-						"nombre": "Horchata",
-						"img": "/public/img/bebidas/aguas/2.jpg"
+						"nombre": "Jumex",
+						"img": "/public/img/bebidas/jugos/2.jpg"
+					},
+					{
+						"ID": "2",
+						"nombre": "Bida",
+						"img": "/public/img/bebidas/jugos/3.jpg"
+					}
+				]
+			},
+			{
+				"ID": "2",
+				"nombre": "Jugos naturales",
+				"precio": "28",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/3.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Naranja",
+						"img": "/public/img/bebidas/jugosNat/1.jpg"
+
+					},
+					{
+						"ID": "1",
+						"nombre": "Toronja",
+						"img": "/public/img/bebidas/jugosNat/2.jpg"
+					},
+					{
+						"ID": "2",
+						"nombre": "Zanahoria",
+						"img": "/public/img/bebidas/jugosNat/3.jpg"
+					}
+				]
+			},
+			{
+				"ID": "3",
+				"nombre": "Licuados",
+				"precio": "28",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/4.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Platano",
+						"img": "/public/img/bebidas/licuados/1.jpg"
+
+					},
+					{
+						"ID": "1",
+						"nombre": "Fresa",
+						"img": "/public/img/bebidas/licuados/2.jpg"
+					},
+					{
+						"ID": "2",
+						"nombre": "Papaya",
+						"img": "/public/img/bebidas/licuados/3.jpg"
+					},
+					{
+						"ID": "3",
+						"nombre": "Mango",
+						"img": "/public/img/bebidas/licuados/4.jpg"
+					},
+					{
+						"ID": "4",
+						"nombre": "Chocolate",
+						"img": "/public/img/bebidas/licuados/5.jpg"
+					}
+				]
+			},
+			{
+				"ID": "4",
+				"nombre": "Otros",
+				"precio": "15",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/1.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Café",
+						"img": "/public/img/bebidas/otros/1.jpg"
+
+					},
+					{
+						"ID": "1",
+						"nombre": "Agua embotellada",
+						"img": "/public/img/bebidas/otros/2.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nombre": "Natural",
+		"platillos": 
+		[
+			{
+				"ID": "0",
+				"nombre": "Sandwich",
+				"precio": "30",
+				"descripcion": "Sandwich",
+				"img": "../public/img/natural/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Atun"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pollo"
+					},
+					{
+						"ID": "2",
+						"nombre": "Jamon"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Croissant",
+				"precio": "35",
+				"descripcion": "Croissant",
+				"img": "../public/img/natural/2.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Pollo"
+					},
+					{
+						"ID": "1",
+						"nombre": "Jamon con queso"
+					}
+				]
+			},
+			{
+				"ID": "2",
+				"nombre": "Panini",
+				"precio": "35",
+				"descripcion": "Panini",
+				"img": "../public/img/natural/3.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "jamon"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pollo"
+					}
+				]
+			},
+			{
+				"ID": "3",
+				"nombre": "Baguette",
+				"precio": "25",
+				"descripcion": "Baguette",
+				"img": "../public/img/natural/4.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "jamon"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pollo"
+					}
+				]
+			},
+			{
+				"ID": "4",
+				"nombre": "Ensalada",
+				"precio": "17",
+				"descripcion": "Diversos antojos",
+				"img": "../public/img/natural/5.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "jamon"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pollo"
+					}
+				]
+			},
+			{
+				"ID": "5",
+				"nombre": "Ensalada Dulce",
+				"precio": "50",
+				"descripcion": "Ensalada dulce",
+				"img": "../public/img/natural/6.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Lechuga con fruta"
+					},
+					{
+						"ID": "1",
+						"nombre": "Coctel de fruta"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nombre": "Natural",
+		"platillos": 
+		[
+			{
+				"ID": "0",
+				"nombre": "Beca",
+				"precio": "0",
+				"descripcion": "Beca",
+				"img": "../public/img/beca/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "DAR TU NUMERO DE CONTROL"
 					}
 				]
 			}
