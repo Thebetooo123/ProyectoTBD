@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: coffeebase
+-- Host: 127.0.0.1    Database: database
 -- ------------------------------------------------------
--- Server version	5.7.19
+-- Server version	5.5.5-10.1.26-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,54 +16,86 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `clientes`
+-- Table structure for table `becario`
 --
 
-DROP TABLE IF EXISTS `clientes`;
+DROP TABLE IF EXISTS `becario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `clientes` (
-  `no_clientes` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) NOT NULL,
-  `becario` enum('Si','No') DEFAULT NULL,
-  PRIMARY KEY (`no_clientes`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `becario` (
+  `becario_id` int(11) NOT NULL AUTO_INCREMENT,
+  `No_control` varchar(8) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Apellido_pat` varchar(50) NOT NULL,
+  `Apellido_mat` varchar(50) NOT NULL,
+  `Fecha_nac` datetime NOT NULL,
+  `Telefono` varchar(10) NOT NULL,
+  `Ingreso_mensual` decimal(2,0) NOT NULL,
+  PRIMARY KEY (`becario_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `clientes`
+-- Dumping data for table `becario`
 --
 
-LOCK TABLES `clientes` WRITE;
-/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+LOCK TABLES `becario` WRITE;
+/*!40000 ALTER TABLE `becario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `becario` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `direcciones`
+-- Table structure for table `bitacora`
 --
 
-DROP TABLE IF EXISTS `direcciones`;
+DROP TABLE IF EXISTS `bitacora`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `direcciones` (
-  `no_direcciones` int(11) NOT NULL AUTO_INCREMENT,
-  `calle` varchar(100) NOT NULL,
-  `colonia` varchar(100) NOT NULL,
-  `num_calle` varchar(50) NOT NULL,
-  `C_P` varchar(50) NOT NULL,
-  `ciudad` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`no_direcciones`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `bitacora` (
+  `bitacora_id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` datetime NOT NULL,
+  `cantidad` double NOT NULL,
+  PRIMARY KEY (`bitacora_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `direcciones`
+-- Dumping data for table `bitacora`
 --
 
-LOCK TABLES `direcciones` WRITE;
-/*!40000 ALTER TABLE `direcciones` DISABLE KEYS */;
-/*!40000 ALTER TABLE `direcciones` ENABLE KEYS */;
+LOCK TABLES `bitacora` WRITE;
+/*!40000 ALTER TABLE `bitacora` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bitacora` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `detalle_ordenes`
+--
+
+DROP TABLE IF EXISTS `detalle_ordenes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `detalle_ordenes` (
+  `detalle_ordenes_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo_usuario_id` int(11) NOT NULL,
+  `orden_id` int(11) NOT NULL,
+  `fecha_ordenes` datetime NOT NULL,
+  `costo_total` double NOT NULL,
+  PRIMARY KEY (`detalle_ordenes_id`),
+  KEY `fk_orden_id_idx` (`orden_id`),
+  KEY `fk_tipo_usuario_id_idx` (`tipo_usuario_id`),
+  CONSTRAINT `fk_orden_id` FOREIGN KEY (`orden_id`) REFERENCES `ordenes` (`orden_id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_tipo_usuario_id` FOREIGN KEY (`tipo_usuario_id`) REFERENCES `tipo_usuario` (`tipo_usuario_id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `detalle_ordenes`
+--
+
+LOCK TABLES `detalle_ordenes` WRITE;
+/*!40000 ALTER TABLE `detalle_ordenes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detalle_ordenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -76,12 +108,12 @@ DROP TABLE IF EXISTS `empleados`;
 CREATE TABLE `empleados` (
   `no_empleado` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
-  `apellidos` varchar(100) NOT NULL,
-  `puesto` varchar(50) NOT NULL,
-  `no_direccion` int(11) NOT NULL,
-  PRIMARY KEY (`no_empleado`),
-  KEY `no_direccion` (`no_direccion`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `apellido_pat` varchar(50) NOT NULL,
+  `apellido_mat` varchar(50) DEFAULT NULL,
+  `telefono` int(11) NOT NULL,
+  `puesto` enum('Caja','Cocina') NOT NULL,
+  PRIMARY KEY (`no_empleado`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,36 +126,6 @@ LOCK TABLES `empleados` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `inventario`
---
-
-DROP TABLE IF EXISTS `inventario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `inventario` (
-  `no_dia` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha` datetime NOT NULL,
-  `no_producto` int(11) NOT NULL,
-  `no_proveedor` int(11) NOT NULL,
-  `inv_min` int(11) NOT NULL,
-  `inv_max` int(11) DEFAULT NULL,
-  `costo` varchar(150) DEFAULT NULL,
-  PRIMARY KEY (`no_dia`),
-  KEY `no_producto` (`no_producto`),
-  KEY `no_proveedor` (`no_proveedor`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `inventario`
---
-
-LOCK TABLES `inventario` WRITE;
-/*!40000 ALTER TABLE `inventario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `inventario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `ordenes`
 --
 
@@ -131,16 +133,14 @@ DROP TABLE IF EXISTS `ordenes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ordenes` (
-  `no_orden` int(11) NOT NULL AUTO_INCREMENT,
-  `no_producto` int(11) NOT NULL,
-  `no_clientes` int(11) NOT NULL,
+  `orden_id` int(11) NOT NULL AUTO_INCREMENT,
+  `platillo_id` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `costo_total` double NOT NULL,
   `fecha` datetime NOT NULL,
-  PRIMARY KEY (`no_orden`),
-  KEY `no_producto` (`no_producto`),
-  KEY `no_clientes` (`no_clientes`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`orden_id`),
+  KEY `fk_platillo_id_idx` (`platillo_id`),
+  CONSTRAINT `fk_platillo_id` FOREIGN KEY (`platillo_id`) REFERENCES `platillos` (`platillo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,7 +149,33 @@ CREATE TABLE `ordenes` (
 
 LOCK TABLES `ordenes` WRITE;
 /*!40000 ALTER TABLE `ordenes` DISABLE KEYS */;
+INSERT INTO `ordenes` VALUES (1,1,3,'2018-05-21 19:23:19'),(2,1,2,'0000-00-00 00:00:00'),(3,1,4,'0000-00-00 00:00:00'),(4,1,2,'0000-00-00 00:00:00'),(5,1,1,'0000-00-00 00:00:00'),(6,1,2,'0000-00-00 00:00:00'),(7,1,2,'0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `ordenes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `platillos`
+--
+
+DROP TABLE IF EXISTS `platillos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `platillos` (
+  `platillo_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_platillo` varchar(50) NOT NULL,
+  `costo` double NOT NULL,
+  PRIMARY KEY (`platillo_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `platillos`
+--
+
+LOCK TABLES `platillos` WRITE;
+/*!40000 ALTER TABLE `platillos` DISABLE KEYS */;
+INSERT INTO `platillos` VALUES (1,'prueba',15),(2,'prueba2',10);
+/*!40000 ALTER TABLE `platillos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -179,51 +205,29 @@ LOCK TABLES `productos` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `proveedor`
+-- Table structure for table `tipo_usuario`
 --
 
-DROP TABLE IF EXISTS `proveedor`;
+DROP TABLE IF EXISTS `tipo_usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `proveedor` (
-  `no_proveedor` int(11) NOT NULL AUTO_INCREMENT,
-  `no_tipo` int(11) NOT NULL,
-  `nombre` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`no_proveedor`),
-  KEY `no_tipo` (`no_tipo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `tipo_usuario` (
+  `tipo_usuario_id` int(11) NOT NULL AUTO_INCREMENT,
+  `becario_id` int(11) DEFAULT NULL,
+  `usuario_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`tipo_usuario_id`),
+  KEY `fk_becario_id_idx` (`becario_id`),
+  CONSTRAINT `fk_becario_id` FOREIGN KEY (`becario_id`) REFERENCES `becario` (`becario_id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `proveedor`
+-- Dumping data for table `tipo_usuario`
 --
 
-LOCK TABLES `proveedor` WRITE;
-/*!40000 ALTER TABLE `proveedor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `proveedor` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tipo_proveedor`
---
-
-DROP TABLE IF EXISTS `tipo_proveedor`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tipo_proveedor` (
-  `no_tipo` int(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(50) NOT NULL,
-  PRIMARY KEY (`no_tipo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tipo_proveedor`
---
-
-LOCK TABLES `tipo_proveedor` WRITE;
-/*!40000 ALTER TABLE `tipo_proveedor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tipo_proveedor` ENABLE KEYS */;
+LOCK TABLES `tipo_usuario` WRITE;
+/*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -234,14 +238,10 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
-  `no_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `no_empleado` int(11) NOT NULL,
-  `privilegios` varchar(100) NOT NULL,
-  `no_tipos` int(11) NOT NULL,
-  PRIMARY KEY (`no_usuario`),
-  KEY `no_empleado` (`no_empleado`),
-  KEY `no_tipos` (`no_tipos`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `usuario_id` int(11) NOT NULL AUTO_INCREMENT,
+  `no_cliente` int(11) NOT NULL,
+  PRIMARY KEY (`usuario_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -252,38 +252,6 @@ LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `usuarios_tipo`
---
-
-DROP TABLE IF EXISTS `usuarios_tipo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuarios_tipo` (
-  `no_tipos` int(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` enum('adminBase','adminWeb','adminGeneral','adminEmpleado') DEFAULT NULL,
-  `otros` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`no_tipos`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuarios_tipo`
---
-
-LOCK TABLES `usuarios_tipo` WRITE;
-/*!40000 ALTER TABLE `usuarios_tipo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuarios_tipo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping events for database 'coffeebase'
---
-
---
--- Dumping routines for database 'coffeebase'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -294,4 +262,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-07 10:21:10
+-- Dump completed on 2018-05-22 20:58:39
