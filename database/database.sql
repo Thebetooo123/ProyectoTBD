@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: database
+-- Host: localhost    Database: coffeebase2
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.26-MariaDB
+-- Server version	5.7.19
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,9 +30,9 @@ CREATE TABLE `becario` (
   `Apellido_mat` varchar(50) NOT NULL,
   `Fecha_nac` datetime NOT NULL,
   `Telefono` varchar(10) NOT NULL,
-  `Ingreso_mensual` decimal(2,0) NOT NULL,
+  `Ingreso_mensual` double NOT NULL,
   PRIMARY KEY (`becario_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `becario` (
 
 LOCK TABLES `becario` WRITE;
 /*!40000 ALTER TABLE `becario` DISABLE KEYS */;
+INSERT INTO `becario` VALUES (1,'15551435','Hector','Rosales','Arcubia','1994-02-12 00:00:00','6141571731',4400),(2,'15551094','Ana','Gutierrez','Lopez','1996-05-24 00:00:00','6148462338',4500),(3,'14553548','Abraham','Lechuga','Rangel','1997-12-31 00:00:00','6147826952',5000),(4,'15556168','Beatriz','Rodrigez','Villa','1997-11-03 00:00:00','6148952366',4500),(5,'16663543','Yair','Luna','Lopez','1996-01-22 00:00:00','6145789568',4400),(6,'12225468','Edgar','Jaquez','Soto','1998-03-26 00:00:00','6145328958',5500),(7,'13335468','Oscar','Arcubia','Acosta','1995-04-26 00:00:00','6143546855',4500),(8,'15555483','Nohemi','Rangel','Luna','1996-06-25 00:00:00','6145464546',4600),(9,'12226546','Linda','Lopez','Espinoza','1998-08-24 00:00:00','6145986528',6000),(10,'13336548','Raul','Guerra','Anaya','1998-09-23 00:00:00','6142225863',4800),(11,'14445564','Luis','Flores','Rosales','1999-01-21 00:00:00','6145518541',5200),(12,'15554684','Jose','Quintana','Lopez','1997-02-06 00:00:00','6146846166',5300),(13,'16665486','Marco','Saens','Gutierrez','1998-03-08 00:00:00','6146526461',4900),(14,'17776546','Rosa','Anaya','Lara','1998-05-05 00:00:00','6146846681',5200),(15,'18885483','Carmen','Corral','Arcubia','1999-04-06 00:00:00','6142352325',5100),(16,'15551434','Luis','Peña','Rangel','1996-06-27 00:00:00','6146586411',4300),(17,'14445698','Julieta','Lopez','Rojas','1997-08-20 00:00:00','6146526516',4600),(18,'12224654','Luisa','Obrador','Salas','1998-07-17 00:00:00','6145268654',5900),(19,'15558918','Antonio','Rosales','Tomate','1999-09-17 00:00:00','6144684548',7000),(20,'14446541','Jose','Gonzalez','Lozano','1997-10-12 00:00:00','6143522674',6500),(21,'14446468','Laura','Nunes','Rocha','1998-11-15 00:00:00','6145864556',4600),(22,'15555468','Alberto','Cordoba','Vega','1997-12-04 00:00:00','6146568648',4700),(23,'16664681','Fernanda','Salasar','De Leon','1999-05-06 00:00:00','6146518446',5800),(24,'13336551','Gabriel','Murrillo','Huerta','1998-06-05 00:00:00','6146516168',7600),(25,'14446565','William','Rocha','Arana','1997-05-27 00:00:00','6143568165',4500),(26,'17771651','Gabriela','Trejo','Chavez','1998-03-21 00:00:00','6146456816',7600),(27,'15551151','Joseline','Galaz','Chavira','1997-04-22 00:00:00','6146486828',5500),(28,'15554642','Wenndy','Fernandez','Torres','1997-06-23 00:00:00','6146521681',5600),(29,'12226185','Edgar','Villa','Galvan','1998-06-14 00:00:00','6146516815',5700),(30,'14446151','Juan','Portillo','Yapoor','1998-04-23 00:00:00','6141168462',4900),(31,'13331652','Aylin','Gardea','Mora','1999-08-22 00:00:00','6141864565',4500);
 /*!40000 ALTER TABLE `becario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,10 +111,10 @@ CREATE TABLE `empleados` (
   `nombre` varchar(50) NOT NULL,
   `apellido_pat` varchar(50) NOT NULL,
   `apellido_mat` varchar(50) DEFAULT NULL,
-  `telefono` int(11) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
   `puesto` enum('Caja','Cocina') NOT NULL,
   PRIMARY KEY (`no_empleado`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,6 +123,7 @@ CREATE TABLE `empleados` (
 
 LOCK TABLES `empleados` WRITE;
 /*!40000 ALTER TABLE `empleados` DISABLE KEYS */;
+INSERT INTO `empleados` VALUES (1,'Roberto','Gomez','Rangel','6145689553','Caja'),(2,'Alfredo','Lechuga','Palacios','6145116554','Caja'),(3,'Alexis','Corral','Villa','6145681618','Cocina'),(4,'Jacobo','Duarte','Najera','6146115618','Cocina'),(5,'Anai','Trejo','Lechuga','6146516516','Cocina'),(6,'Nia','Huerta','De leon','6141651651','Cocina'),(7,'Kristel','Meza','Lopez','6154151168','Cocina'),(8,'Punie','Gutierrez','Torres','6145168165','Cocina'),(9,'Tania','Jaquez','Lindo','6146516816','Cocina');
 /*!40000 ALTER TABLE `empleados` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,10 +164,10 @@ DROP TABLE IF EXISTS `platillos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `platillos` (
   `platillo_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre_platillo` varchar(50) NOT NULL,
+  `nombre_platillo` varchar(100) NOT NULL,
   `costo` double NOT NULL,
   PRIMARY KEY (`platillo_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,7 +176,7 @@ CREATE TABLE `platillos` (
 
 LOCK TABLES `platillos` WRITE;
 /*!40000 ALTER TABLE `platillos` DISABLE KEYS */;
-INSERT INTO `platillos` VALUES (1,'prueba',15),(2,'prueba2',10);
+INSERT INTO `platillos` VALUES (1,'Enchiladas',50),(2,'Tacos c/arroz',45),(3,'Huevos al gusto c/chilaquiles frijoles y cafe',60),(4,'Huevos al gusto c/frijoles, papas fritas y cafe',60),(5,'Guisado, frijoles chilaquiles y cafe',65),(6,'Hotcakes (3) fruta y cafe',60),(7,'Fruta de temporada con yogurth y juego de naranja',55),(8,'Pan con mantequilla o mermelada, fruta y cafe',55),(9,'Pan dulce con cafe',25),(10,'Pan c/mantequilla y avena',35),(11,'Burrito guisado del dia',14),(12,'Burrito lomo c/aguacate y verdura',28),(13,'Burrito de chile relleno',22),(14,'Montado',25),(15,'Torta  lomo c/jamon queso y aguacate',45),(16,'Torta desebrada c/aguacate',33),(17,'Torta milanesa c/aguacate',50),(18,'Torta jamon c/queso y aguacate ',33),(19,'Torta del chavo salchicha, repollo y tomate',25),(20,'Hamburgesa c/jamon y queso',35),(21,'Hamburgesac/papas',45),(22,'Hot dog c/papas',25),(23,'Pizza',14),(24,'Enchiladas rojas c/arroz',50),(25,'Tacos c/arroz',45),(26,'Flautas c/arroz',50),(27,'Chilaquiles sencillos',30),(28,'Chilaquiles c/frijoles refritos',35),(29,'Mollete sencillo',20),(30,'Mollete montado',35),(31,'Cuernito c/jamon y queso amarillo',20),(32,'Papas francesas',25),(33,'Papas francesas c/queso',35),(34,'Quesadilla de maiz',30),(35,'Quesadilla de harina',35),(36,'Sincronizada',40),(37,'Sandwich Atun',32),(38,'Sandwich Pollo',30),(39,'Sandwich Jamon c/queso',30),(40,'Panini polloc/queso',45),(41,'Panini jamon c/queso',35),(42,'Panini combinado',45),(43,'Ensalada Lechuga con fruta',45),(44,'Coctel de fruta',30),(45,'Coctel de yogurth y granola',35),(46,'Licuado de platano',28),(47,'Jugo naranja',22),(48,'Jugo toronja',22),(49,'Jugo zanahoria',32),(50,'Combinado',28),(51,'Leche con chocolate',28),(52,'Cafe',15);
 /*!40000 ALTER TABLE `platillos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,6 +254,14 @@ LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'coffeebase2'
+--
+
+--
+-- Dumping routines for database 'coffeebase2'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -262,4 +272,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-22 20:58:39
+-- Dump completed on 2018-05-23 20:07:20

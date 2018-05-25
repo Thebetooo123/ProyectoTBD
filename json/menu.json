@@ -456,24 +456,5 @@
 				]
 			}
 		]
-	},
-	{
-		"nombre": "Natural",
-		"platillos": 
-		[
-			{
-				"ID": "0",
-				"nombre": "Beca",
-				"precio": "0",
-				"descripcion": "Beca",
-				"img": "../public/img/beca/1.jpg",
-				"ingredientes": [
-					{
-						"ID": "0",
-						"nombre": "DAR TU NUMERO DE CONTROL"
-					}
-				]
-			}
-		]
 	}
 ]
